@@ -15,7 +15,7 @@ type Props = {};
 const Header: React.FC<Props> = () => {
   return (
     <nav className="h-60 flex p-4 items-center">
-      <div className="flex gap-6 items-center justify-between">
+      <div className="flex w-full items-center gap-12 justify-between">
         <h1 className="text-3xl font-bold text-white">
           <a href="/">Ana Trunova</a>
         </h1>

@@ -39,7 +39,7 @@ export default function RootLayout({ children }) {
         <meta name="description" content={metadata.description} />
       </head>
       <body
-        className="antialiased background color"
+        className="antialiased background color max-w-[1400px] mx-auto"
         // style={{ fontFamily: "Geist Sans, Geist Mono" }}
       >
         {children}
