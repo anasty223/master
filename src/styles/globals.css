@@ -64,7 +64,7 @@
     background-position: 0 0;
     background-image: conic-gradient(
       transparent,
-      rgba(168, 239, 255, 1),
+      rgb(41, 42, 43),
       transparent 30%
     );
     animation: rotate 4s linear infinite;
@@ -78,7 +78,7 @@
     top: 6px;
     width: calc(100% - 12px);
     height: calc(100% - 12px);
-    background: rgb(128, 125, 125);
+    background: rgb(117, 117, 117);
     border-radius: 50%;
   }
 }

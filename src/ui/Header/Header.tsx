@@ -14,29 +14,29 @@ type Props = {};
 
 const Header: React.FC<Props> = () => {
   return (
-    <nav className="h-60 flex p-4 items-center">
+    <nav className="h-60 flex p-4  max-w-[1400px]  mx-auto px-8 ">
       <div className="flex w-full items-center gap-12 justify-between">
-        <h1 className="text-3xl font-bold text-white">
+        <h1 className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-black via-white to-brown">
           <a href="/">Ana Trunova</a>
         </h1>
 
-        <ul className="flex gap-2">
+        <ul className="flex gap-8">
           <li className="text-2xl transition-transform duration-300 transform hover:scale-110">
-            <div className="conic flex justify-center items-center">
+            <div className=" flex justify-center items-center">
               <a href="mailto:anasty22@gmail.com">
                 <HiOutlineAtSymbol />
               </a>
             </div>
           </li>
           <li className="text-2xl transition-transform duration-300 transform hover:scale-110">
-            <div className="conic flex justify-center items-center">
+            <div className=" flex justify-center items-center">
               <a href="https://t.me/anasty223" target="_blank">
                 <TbBrandTelegram />
               </a>
             </div>
           </li>
           <li className="text-2xl transition-transform duration-300 transform hover:scale-110">
-            <div className="conic flex justify-center items-center">
+            <div className=" flex justify-center items-center">
               <a href="tel:+380937657086">
                 <HiOutlinePhone />
               </a>
@@ -44,7 +44,7 @@ const Header: React.FC<Props> = () => {
             </div>
           </li>
           <li className="text-2xl transition-transform duration-300 transform hover:scale-110">
-            <div className="conic flex justify-center items-center">
+            <div className=" flex justify-center items-center">
               <a href="tel:+48512514164">
                 <BsTelephoneFill />
               </a>
@@ -52,7 +52,7 @@ const Header: React.FC<Props> = () => {
             </div>
           </li>
           <li className="text-2xl transition-transform duration-300 transform hover:scale-110">
-            <div className="conic flex justify-center items-center">
+            <div className=" flex justify-center items-center">
               <a href="https://www.linkedin.com/in/anasty223/" target="_blank">
                 <CiLinkedin />
               </a>
