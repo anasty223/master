@@ -1,37 +1,24 @@
-import type { Config } from "tailwindcss";
+const { nextui } = require("@nextui-org/react");
 
-const config: Config = {
+/** @type {import('tailwindcss').Config} */
+module.exports = {
   content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/**/*.{js,ts,jsx,tsx,mdx}", // Include .mdx if you are using it
+    // You can uncomment the following lines if you need to include specific folders or packages:
+    // "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
+    // "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    // "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     extend: {
-      colors: {
-        primary: "#3490dc",
-        secondary: "#ffed4a",
-        accent: "#38c172",
-        background: "#0B0B0B",
-        foreground: "#222222",
-      },
-      fontFamily: {
-        sans: ["Inter", "sans-serif"],
-        serif: ["Merriweather", "serif"],
-      },
-      spacing: {
-        128: "32rem",
-        144: "36rem",
-      },
-      borderRadius: {
-        "4xl": "2rem",
-      },
-      boxShadow: {
-        "outline-red": "0 0 0 3px rgba(255, 99, 71, 0.5)",
+      colors: {},
+      screens: {
+        tablet: "640px",
+        laptop: "1024px",
+        desktop: "1280px",
       },
     },
   },
-  plugins: [],
+  darkMode: "class",
+  plugins: [nextui()],
 };
-
-export default config;

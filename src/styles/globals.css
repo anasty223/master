@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* Сброс стилей для всех элементов */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  /* Глобальные стили для body и html */
+  html,
+  body {
+    height: 100%;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+      "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+      "Helvetica Neue", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: black;
+    color: white;
+  }
+
+  /* Стили для ссылок по умолчанию */
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+@keyframes rotate {
+  100% {
+    transform: rotate(1turn);
+  }
+}
+
+.conic {
+  position: relative;
+  z-index: 0;
+  width: 20px;
+  height: 20px;
+  margin: 3px;
+  border-radius: 50%;
+  overflow: hidden;
+  padding: 2rem;
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: -2;
+    left: -50%;
+    top: -50%;
+    width: 200%;
+    height: 200%;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-image: conic-gradient(
+      transparent,
+      rgba(168, 239, 255, 1),
+      transparent 30%
+    );
+    animation: rotate 4s linear infinite;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 6px;
+    top: 6px;
+    width: calc(100% - 12px);
+    height: calc(100% - 12px);
+    background: rgb(128, 125, 125);
+    border-radius: 50%;
+  }
+}
+
+.conic-demo::after {
+  animation: opacityChange 5s infinite linear;
+}
+
+@keyframes opacityChange {
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}

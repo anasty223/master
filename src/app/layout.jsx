@@ -1,5 +1,5 @@
 import React from "react";
-import "../style/globals.css";
+import "../styles/globals.css";
 
 const geistSans = {
   fontFamily: "Geist Sans",
@@ -21,20 +21,20 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        {/* <style>
+        <style>
           {`
-            @font-face {
-              font-family: 'Geist Sans';
-              src: url('./fonts/GeistVF.woff') format('woff');
-              font-weight: 100 900;
-            }
-            @font-face {
-              font-family: 'Geist Mono';
-              src: url('./fonts/GeistMonoVF.woff') format('woff');
-              font-weight: 100 900;
-            }
-          `}
-        </style> */}
+      @font-face {
+        font-family: 'Geist Sans';
+        src: url('./fonts/GeistVF.woff') format('woff');
+        font-weight: 100 900;
+      }
+      @font-face {
+        font-family: 'Geist Mono';
+        src: url('./fonts/GeistMonoVF.woff') format('woff');
+        font-weight: 100 900;
+      }
+    `}
+        </style>
         <title>{metadata.title}</title>
         <meta name="description" content={metadata.description} />
       </head>

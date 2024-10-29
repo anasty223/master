@@ -1,34 +1,62 @@
-"use client"; // Добавьте эту строку
+"use client";
 
 import React from "react";
+import { BsTelephoneFill } from "react-icons/bs";
+import { CiLinkedin } from "react-icons/ci";
+import {
+  HiMiniWallet,
+  HiOutlineAtSymbol,
+  HiOutlinePhone,
+} from "react-icons/hi2";
+import { TbBrandTelegram } from "react-icons/tb";
 
 type Props = {};
 
 const Header: React.FC<Props> = () => {
   return (
-    <nav className="h-64 flex relative w-full bg-blue-600">
-      <div className="flex gap-8 w-full items-center justify-between px-8">
-        <h1 className="text-4xl font-bold text-white">Ana Trunova</h1>
-        <ul className="flex gap-8 text-white ml-auto">
-          <li>
-            <a
-              href="#"
-              style={{ transition: "color 0.3s", color: "white" }}
-              onMouseEnter={(e) => (e.currentTarget.style.color = "red")}
-              onMouseLeave={(e) => (e.currentTarget.style.color = "white")}
-            >
-              Projects
-            </a>
+    <nav className="h-60 flex p-4 items-center">
+      <div className="flex gap-6 items-center justify-between">
+        <h1 className="text-3xl font-bold text-white">
+          <a href="/">Ana Trunova</a>
+        </h1>
+
+        <ul className="flex gap-2">
+          <li className="text-2xl transition-transform duration-300 transform hover:scale-110">
+            <div className="conic flex justify-center items-center">
+              <a href="mailto:anasty22@gmail.com">
+                <HiOutlineAtSymbol />
+              </a>
+            </div>
           </li>
-          <li>
-            <a
-              href="#"
-              style={{ transition: "color 0.3s", color: "white" }}
-              onMouseEnter={(e) => (e.currentTarget.style.color = "red")}
-              onMouseLeave={(e) => (e.currentTarget.style.color = "white")}
-            >
-              Education
-            </a>
+          <li className="text-2xl transition-transform duration-300 transform hover:scale-110">
+            <div className="conic flex justify-center items-center">
+              <a href="https://t.me/anasty223" target="_blank">
+                <TbBrandTelegram />
+              </a>
+            </div>
+          </li>
+          <li className="text-2xl transition-transform duration-300 transform hover:scale-110">
+            <div className="conic flex justify-center items-center">
+              <a href="tel:+380937657086">
+                <HiOutlinePhone />
+              </a>
+              <p className="text-xs">urk</p>
+            </div>
+          </li>
+          <li className="text-2xl transition-transform duration-300 transform hover:scale-110">
+            <div className="conic flex justify-center items-center">
+              <a href="tel:+48512514164">
+                <BsTelephoneFill />
+              </a>
+              <p className="text-xs">pol</p>
+            </div>
+          </li>
+          <li className="text-2xl transition-transform duration-300 transform hover:scale-110">
+            <div className="conic flex justify-center items-center">
+              <a href="https://www.linkedin.com/in/anasty223/" target="_blank">
+                <CiLinkedin />
+              </a>
+            </div>
           </li>
         </ul>
       </div>
