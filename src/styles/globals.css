@@ -95,3 +95,12 @@
     opacity: 1;
   }
 }
+.blurred-edge {
+  background: linear-gradient(to bottom, black 20%, transparent),
+    linear-gradient(to right, black 20%, transparent);
+  -webkit-background-clip: text;
+  mask-image: linear-gradient(to bottom, black 20%, transparent),
+    linear-gradient(to right, black 20%, transparent);
+  -webkit-mask-image: linear-gradient(to bottom, black 20%, transparent),
+    linear-gradient(to right, black 20%, transparent);
+}
