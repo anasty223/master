@@ -3,7 +3,6 @@ import { HiMiniWallet } from "react-icons/hi2";
 import { ImArrowRight } from "react-icons/im";
 import img from "/src/assets/img.png";
 import green from "/src/assets/green.png";
-import oval from "/src/assets/Oval1.png";
 
 type Props = {};
 
@@ -29,12 +28,6 @@ const HeroSection = (props: Props) => {
             </div>
           </li>
         </ul>
-        {/* <img
-          src={oval.src}
-          alt="cv img"
-          className="rounded-lg max-w-[400px] rotate-180 absolute blurred-edge bg-origin-content"
-          style={{ top: "0px", left: "-10px" }}
-        /> */}
       </div>
 
       <div className="relative">
