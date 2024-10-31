@@ -1,4 +1,5 @@
 // src/app/api/cards/[id]/route.ts
+import { ContextProps } from "@/app/cards/[oneCard]/page";
 import { NextResponse } from "next/server";
 
 const cards = [
@@ -65,16 +66,15 @@ const cards = [
     content: "Content for card 9",
   },
 ];
-export async function GET(
-  req: Request,
-  { params }: { params: { id: string } }
-) {
-  const { id } = params;
-  const card = cards.find((card) => card.id === id);
+export async function GET(req: Request, context: ContextProps) {
+  const { id } = context.params; // Используем await для получения id из params
+  console.log(id, "iddddddddddddddddddd");
+
+  const card = cards.find((card) => card.id === id); // Поиск карточки по id
 
   if (!card) {
-    return NextResponse.json({ message: "Card not found" }, { status: 404 });
+    return NextResponse.json({ message: "Card not found" }, { status: 404 }); // Ответ в случае неудачи
   }
 
-  return NextResponse.json(card);
+  return NextResponse.json(card); // Возврат найденной карточки
 }
