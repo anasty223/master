@@ -14,6 +14,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import { FaArrowUpRightFromSquare } from "react-icons/fa6";
+import { useRouter } from "next/navigation";
 
 type Card = {
   id: string;
@@ -24,6 +25,7 @@ type Card = {
 
 const Slider: React.FC = () => {
   const [cards, setCards] = useState<Card[]>([]);
+  const router = useRouter();
 
   useEffect(() => {
     const fetchCards = async () => {
@@ -45,7 +47,7 @@ const Slider: React.FC = () => {
     fetchCards();
   }, []);
   const handleClickCard = (id: string) => {
-    console.log(id);
+    router.push(`/cards/${id}`);
   };
   return (
     <div>

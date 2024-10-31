@@ -6,7 +6,15 @@ const cards = [
     id: "1",
     title: "Notifix",
     img: "/assets/notifix.jpg",
-    content: "Content for card 1",
+    folderImg: [
+      "/assets/notifix/1.jpg",
+      "/assets/notifix/2.jpg",
+      "/assets/notifix/3.jpg",
+    ],
+    myRole:
+      "My role in this project. I sent notifications via email, as well as integration via Telegram. Adding a new member to the project",
+    content:
+      "The Notifix project was developed as an automation tool to streamline software development workflows, specifically aiding DevOps teams in managing and configuring CI/CD processes. The platform integrates smoothly with major services like GitLab, Google, and GitHub, and is adaptable to meet varied company needs, enhancing efficiency for engineering teams.Usability was a priority, with an intuitive interface allowing quick pipeline configurations for task automation. Notifix also supports collaboration tools and security features, including Telegram notifications and SSH for secure connections, helping teams to optimize resources and work more effectively.",
   },
   {
     id: "2",
