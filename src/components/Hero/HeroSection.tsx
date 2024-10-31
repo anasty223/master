@@ -5,6 +5,7 @@ import img from "/src/assets/img.png";
 import green from "/src/assets/269.png";
 import brown from "/src/assets/263.png";
 import bg from "/src/assets/font.png";
+import Slider from "../Slider/Slider";
 
 type Props = {};
 
@@ -15,6 +16,7 @@ const HeroSection = (props: Props) => {
   });
 
   const [typedText, setTypedText] = useState("");
+
   const fullText =
     " I have two years of successful experience working as a frontend developer, and I consider myself a creative and determined individual, ready for new challenges and opportunities. My passion for creating beautiful and intuitive user interfaces is combined with a deep understanding of modern web technologies, allowing me to effectively implement projects of any scale. My approach to development is based on continuous learning and a commitment to improvement, enabling me to stay abreast of the latest trends and best practices in frontend development. I am ready to contribute to the team, enhancing user experience and bringing innovation to every project I work on";
 
@@ -59,6 +61,10 @@ const HeroSection = (props: Props) => {
     >
       <div className="flex justify-between w-full h-full max-w-[1400px] mx-auto px-8 ">
         <div className="relative p-4">
+          <div className="w-[700px] h-[200px] mb-4">
+            <Slider />
+          </div>
+
           <ul className="flex flex-col gap-8 text-white">
             <li>
               <div className="flex gap-2 items-center text-2xl">
@@ -89,11 +95,10 @@ const HeroSection = (props: Props) => {
               src={brown.src}
               alt="cv img"
               className="max-w-[150px] rounded-lg absolute rotate-180 mt-auto opacity-65"
-              style={{ bottom: "165px", left: "-10px", zIndex: 5 }}
+              style={{ bottom: "-50px", left: "-10px", zIndex: 5 }}
             />
           </div>
         </div>
-
         <div className="relative" ref={zoomRef}>
           <img
             src={img.src}
