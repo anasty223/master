@@ -1,8 +1,14 @@
 import OneCard from "@/components/OneCard/OneCard";
 import React from "react";
 
-export default async function Card(context) {
-  const params = await context.params;
+// Добавьте правильные типы
+interface ContextProps {
+  params: {
+    oneCard: string; // Предполагается, что это имя параметра
+  };
+}
+
+export default async function Card({ params }: ContextProps) {
   const { oneCard } = params;
 
   try {
