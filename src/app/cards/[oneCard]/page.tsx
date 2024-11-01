@@ -11,7 +11,9 @@ export default async function Card({ params }: ContextProps) {
   const { oneCard } = params;
 
   try {
-    const response = await fetch(`http://localhost:3000/api/cards/${oneCard}`);
+    const response = await fetch(
+      `${process.env.NEXT_PUBLIC_URL}/api/cards/${oneCard}`
+    );
 
     if (!response.ok) {
       return <div>Не удалось загрузить детали карточки</div>;
