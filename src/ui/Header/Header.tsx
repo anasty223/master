@@ -19,7 +19,16 @@ const Header: React.FC<Props> = () => {
         <h1 className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-black via-white to-brown">
           <a href="/">Ana Trunova</a>
         </h1>
-
+        <div className="">
+          <ul className="flex gap-8">
+            <li className="text-white text-xl  underline hover:decoration-4 ">
+              <a href="/projects">Projects</a>
+            </li>
+            <li className="text-white text-xl  underline hover:decoration-4 ">
+              <a href="/education"> Education</a>
+            </li>
+          </ul>
+        </div>
         <ul className="flex gap-8">
           <li className="text-2xl transition-transform duration-300 transform hover:scale-110">
             <div className=" flex justify-center items-center">

@@ -10,6 +10,7 @@ type Props = {
     content: string;
     myRole: string;
     folderImg: string[];
+    stack: string[];
   };
 };
 
@@ -36,20 +37,31 @@ const OneCard: React.FC<Props> = ({ card }) => {
             {card.img && (
               <img src={card.img} alt={card.title} className="w-full h-auto" />
             )}
+            <div className="flex text-start gap-4 mt-4">
+              {card?.stack &&
+                card?.stack.map((stack, index) => {
+                  return (
+                    <div className="text-lg" key={index}>
+                      {stack}
+                    </div>
+                  );
+                })}
+            </div>
           </div>
-          <div className="flex flex-col gap-4">
+          <div className="flex flex-col gap-4 ">
             <h1 className="text-3xl font-bold">{card.title}</h1>
-            <p>{card.myRole}</p>
+            <p>{card?.myRole}</p>
             <div className="flex flex-wrap gap-4">
-              {card.folderImg.map((imgSrc, index) => (
-                <img
-                  key={index}
-                  src={imgSrc}
-                  alt={`${card.title} image ${index + 1}`}
-                  className="w-32 h-auto cursor-pointer"
-                  onClick={() => handleImageClick(imgSrc)}
-                />
-              ))}
+              {card.folderImg &&
+                card.folderImg.map((imgSrc, index) => (
+                  <img
+                    key={index}
+                    src={imgSrc}
+                    alt={`${card.title} image ${index + 1}`}
+                    className="w-32 h-auto cursor-pointer"
+                    onClick={() => handleImageClick(imgSrc)}
+                  />
+                ))}
             </div>
           </div>
         </div>

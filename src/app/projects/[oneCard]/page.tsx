@@ -5,7 +5,6 @@ export interface ContextProps {
   params: any;
 }
 
-// Обратите внимание на await перед использованием params
 export default async function Card({ params }: ContextProps) {
   // Ожидаем параметры
   const { oneCard } = params;
