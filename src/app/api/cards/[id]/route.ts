@@ -108,14 +108,37 @@ const cards = [
   {
     id: "7",
     title: "Opps",
+    folderImg: [
+      "/assets/opps/1.jpg",
+      "/assets/opps/2.jpg",
+      "/assets/opps/3.jpg",
+      "/assets/opps/4.jpg",
+      "/assets/opps/5.jpg",
+    ],
+    stack: ["Next.js", "Chakra.ui"],
+    myRole:
+      "in this project I worked on login through a code using email. filtering where, in particular, binary search was used in order to speed up the process. Displaying tables with search lists, one list, purchased lists, listing lists, one or several at a time. Editing a profile, changing a photo.",
     img: "/assets/opps.jpg",
-    content: "Content for card 7",
+    content:
+      "Opps.ai is a platform where you can discover fresh opportunity data for cold emailing, targeted advertising audiences, LinkedIn outreach, and Twitter campaigns. As a subscriber, you'll have access to three types of data:- Investors- Companies in high-growth sectors or those that have recently received funding- Custom data available in the marketplace, including curated lists and audience insights.",
   },
   {
     id: "8",
     title: "Viza group",
+    folderImg: [
+      "assets/viza/1.jpg",
+      "assets/viza/2.jpg",
+      "assets/viza/3.jpg",
+      "assets/viza/4.jpg",
+      "assets/viza/5.jpg",
+      "assets/viza/6.jpg",
+      "assets/viza/7.jpg",
+    ],
+    myRole:
+      "Here I participated in the layout of the entire project, login and registration, with confirmation of the telephone number, recaptcha. Server side rendering. Creating and editing a claim. Multiple chats between the lawyer, administrator and plaintiff of filed claims, those who will invest, informational chats. Sending files via chats. Saving chat history at all stages. Integration of notifications of read and unread messages.",
+    stack: ["Next.js", "Chakra.ui"],
     img: "/assets/viza.jpg",
-    content: "Content for card 8",
+    content: "",
   },
   {
     id: "9",
