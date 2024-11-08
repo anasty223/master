@@ -158,9 +158,9 @@ const cards = [
       "/assets/mysiteboost/7.jpg",
     ],
     myRole:
-      "My role in this project is designing the layout of all pages. Header, localization, interaction with Starpi, blog, connection creation, email and telegram integration. Editing a profile, deleting a profile, changing a password, time zones, avatars. One dashboard page, data output, graph, site editing, pause, refresh, delete. eo analytics, cards and data. Report, display data on the page, send, print and save a PDF file. Sing In, Sing Up",
+      "My role in this project is designing the layout of all pages. Header, localization, interaction with Strapi, blog, connection creation, email and telegram integration. Editing a profile, deleting a profile, changing a password, time zones, avatars. One dashboard page, data output, graph, site editing, pause, refresh, delete. eo analytics, cards and data. Report, display data on the page, send, print and save a PDF file. Sing In, Sing Up",
     title: "MySiteBoost",
-    stack: ["Next.js", "Chakra.ui", "Firebase"],
+    stack: ["Next.js", "Chakra.ui", "Firebase", "Strapi"],
     img: "/assets/mySiteBoost.jpg",
     content: "Website SEO analytics tracking project",
   },
@@ -187,8 +187,11 @@ const cards = [
     id: "12",
     title: "Squeezeimg",
     img: "/assets/squeezeImg.jpg",
-    content: "Content for card 9",
+    content:
+      "A project for editing images, reducing quality, removing background.",
     stack: ["Next.js", "Chakra.ui"],
+    myRole:
+      "In this project I registered via email, Google, Facebook, login. Header, Adding a picture to the editor, loading several pictures into the processing queue. Removing background, reducing size. Lowders.",
     folderImg: [
       "/assets/squeezeImg/1.jpg",
       "/assets/squeezeImg/2.jpg",
