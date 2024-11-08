@@ -28,7 +28,7 @@ const cards = [
       "/assets/3dvis/5.jpg",
       "/assets/3dvis/6.jpg",
     ],
-    stack: ["Next.js", "Tailwind", "Sql"],
+    stack: ["Next.js", "Tailwind", "Sql", "Dato"],
     img: "/assets/3dvis.jpg",
     myRole:
       "On this project I did localization using the Dato database. Dark and light theme. Styling main page, Image preloading, Image Zoom,images-gallery,page- Services,page- About me, Contacts page, Footer and Header pages, animation using framer-motion and aos. Mobile responsive interface",
@@ -49,7 +49,7 @@ const cards = [
     ],
     myRole:
       "On this project, I participated in the creation of a page for one company, one person, displaying a list of people, making charts and tables, the main page, server side rendering of news pages on the blog. Took part in the creation of filters, and advertising banners",
-    stack: ["Next.js", "Chakra.ui"],
+    stack: ["Next.js", "Chakra.ui", , "Strapi"],
     img: "/assets/aventure.jpg",
   },
   {
@@ -136,21 +136,33 @@ const cards = [
     ],
     myRole:
       "Here I participated in the layout of the entire project, login and registration, with confirmation of the telephone number, recaptcha. Server side rendering. Creating and editing a claim. Multiple chats between the lawyer, administrator and plaintiff of filed claims, those who will invest, informational chats. Sending files via chats. Saving chat history at all stages. Integration of notifications of read and unread messages.",
-    stack: ["Next.js", "Chakra.ui"],
+    stack: ["Next.js", "Chakra.ui", "Firebase", "Strapi"],
     img: "/assets/viza.jpg",
     content: "",
   },
-  {
-    id: "9",
-    title: "Fastmint",
-    img: "/assets/fastmint.jpg",
-    content: "Content for card 9",
-  },
+  // {
+  //   id: "9",
+  //   title: "Fastmint",
+  //   img: "/assets/fastmint.jpg",
+  //   content: "Content for card 9",
+  // },
   {
     id: "10",
-    title: "My site boost",
+    folderImg: [
+      "/assets/mysiteboost/1.jpg",
+      "/assets/mysiteboost/2.jpg",
+      "/assets/mysiteboost/3.jpg",
+      "/assets/mysiteboost/4.jpg",
+      "/assets/mysiteboost/5.jpg",
+      "/assets/mysiteboost/6.jpg",
+      "/assets/mysiteboost/7.jpg",
+    ],
+    myRole:
+      "My role in this project is designing the layout of all pages. Header, localization, interaction with Starpi, blog, connection creation, email and telegram integration. Editing a profile, deleting a profile, changing a password, time zones, avatars. One dashboard page, data output, graph, site editing, pause, refresh, delete. eo analytics, cards and data. Report, display data on the page, send, print and save a PDF file. Sing In, Sing Up",
+    title: "MySiteBoost",
+    stack: ["Next.js", "Chakra.ui", "Firebase"],
     img: "/assets/mySiteBoost.jpg",
-    content: "Content for card 9",
+    content: "Website SEO analytics tracking project",
   },
   {
     id: "11",
@@ -166,26 +178,32 @@ const cards = [
     ],
     myRole:
       "I was responsible for the header, for the SEO analytics page where I used resize tables, cards, chart, skeleton ,search, page Pages, reports - markup and styling and logic.",
-    stack: ["Tauri", "React.js", "Chakra.ui"],
+    stack: ["Tauri", "React.js", "Chakra.ui", "Firebase"],
     content:
       "MiraSEO was developed to support website owners and SEO experts in optimizing their sites. It offers an advanced toolset for comprehensive site analysis, helping identify code and structure issues and assessing adherence to search engine standards. By doing so, MiraSEO aids in boosting search rankings, enhancing user experience, driving more traffic, and improving load times. The platform provides a suite of auditing and competitor analysis tools, delivering practical SEO improvement insights. It caters to a diverse user base—from individual site owners to large enterprises—with personalized reports to enhance search visibility. With its interactive features and in-depth analytics, MiraSEO streamlines the website optimization process.",
   },
 
   {
     id: "12",
-    title: "SqueezeImg",
+    title: "Squeezeimg",
     img: "/assets/squeezeImg.jpg",
     content: "Content for card 9",
+    stack: ["Next.js", "Chakra.ui"],
+    folderImg: [
+      "/assets/squeezeImg/1.jpg",
+      "/assets/squeezeImg/2.jpg",
+      "/assets/squeezeImg/3.jpg",
+    ],
   },
 ];
 export async function GET(req: Request, context: ContextProps) {
-  const { id } = context.params; // Используем await для получения id из params
+  const { id } = context.params;
 
-  const card = cards.find((card) => card.id === id); // Поиск карточки по id
+  const card = cards.find((card) => card.id === id);
 
   if (!card) {
-    return NextResponse.json({ message: "Card not found" }, { status: 404 }); // Ответ в случае неудачи
+    return NextResponse.json({ message: "Card not found" }, { status: 404 });
   }
 
-  return NextResponse.json(card); // Возврат найденной карточки
+  return NextResponse.json(card);
 }

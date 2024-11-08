@@ -55,12 +55,12 @@ const cards = [
     img: "/assets/viza.jpg",
     content: "Content for card 8",
   },
-  {
-    id: "9",
-    title: "Fastmint",
-    img: "/assets/fastmint.jpg",
-    content: "Content for card 9",
-  },
+  // {
+  //   id: "9",
+  //   title: "Fastmint",
+  //   img: "/assets/fastmint.jpg",
+  //   content: "Content for card 9",
+  // },
   {
     id: "10",
     title: "My site boost",

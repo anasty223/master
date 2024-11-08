@@ -77,32 +77,6 @@ const HeroSection = (props: Props) => {
                 ></iframe>
               </div>
             </Skeleton>
-            {/* 
-            <div
-              className="absolute flex gap-2"
-              style={{ top: "20px", right: "20px" }}
-            >
-              <button
-                onClick={togglePlayPause}
-                className="bg-white p-2 rounded"
-                style={{
-                  color: "white",
-                  backgroundImage: `linear-gradient(to bottom, rgba(105, 105, 105, 1) 25%, rgba(0, 0, 0, 1) 100%)`,
-                }}
-              >
-                {isPlaying ? <FaPause /> : <FaPlay />}
-              </button>
-              <button
-                onClick={toggleMute}
-                className="bg-white p-2 rounded"
-                style={{
-                  color: "white",
-                  backgroundImage: `linear-gradient(to bottom, rgba(105, 105, 105, 1) 25%, rgba(0, 0, 0, 1) 100%)`,
-                }}
-              >
-                {isMuted ? <FaMusic /> : <FaVolumeMute />}
-              </button>
-            </div> */}
 
             <div className="mt-8">
               <Skeleton className="max-w-[700px]" isLoaded={!loading}>
