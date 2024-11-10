@@ -1,12 +1,8 @@
 "use client";
-import React, { useRef, useState, useEffect } from "react";
-import { ImArrowRight } from "react-icons/im";
-import img from "/src/assets/img.png";
-import green from "/src/assets/269.png";
-import brown from "/src/assets/263.png";
-import bg from "/src/assets/font5.png";
+import { useEffect, useRef, useState } from "react";
 import Zoom from "react-medium-image-zoom";
 import "react-medium-image-zoom/dist/styles.css";
+import img from "/src/assets/img.png";
 
 import { MdOutlineSaveAlt } from "react-icons/md";
 
