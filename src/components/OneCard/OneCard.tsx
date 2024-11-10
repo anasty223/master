@@ -36,7 +36,7 @@ const OneCard: React.FC<Props> = ({ card }) => {
   return (
     <div className="">
       <Header />
-      <div className="flex flex-col items-start justify-center gap-4 max-w-[1400px] mx-auto p-4 md:p-0">
+      <div className="flex flex-col items-start justify-center gap-4 max-w-[1400px] mx-auto p-4 md:p-0 z-1">
         <div className="my-4">
           <Breadcrumb items={breadcrumbItems} />
         </div>

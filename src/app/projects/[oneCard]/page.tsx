@@ -1,5 +1,6 @@
 import OneCard from "@/components/OneCard/OneCard";
 import React from "react";
+import bg from "/src/assets/font2.png";
 
 export interface ContextProps {
   params: any;
@@ -25,7 +26,10 @@ export default async function Card({ params }: ContextProps) {
     }
 
     return (
-      <div>
+      <div
+        className="relative w-full h-[100vh] bg-cover bg-center overflow-visible z-0"
+        style={{ backgroundImage: `url(${bg.src})` }}
+      >
         <OneCard card={card} />
       </div>
     );
