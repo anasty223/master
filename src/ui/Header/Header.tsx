@@ -23,7 +23,7 @@ const Header: React.FC<Props> = () => {
     pathname === path ? "text-blue-500 underline" : "";
 
   return (
-    <nav className="h-24 md:h-60 flex p-4 max-w-[1400px] mx-auto px-8">
+    <nav className="h-34 md:h-60 flex p-4 max-w-[1400px] mx-auto px-8">
       <div className="md:hidden">
         <button onClick={toggleMenu} className="text-xl text-white">
           <GiHamburgerMenu />

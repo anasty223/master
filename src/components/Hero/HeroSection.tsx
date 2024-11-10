@@ -43,13 +43,13 @@ const HeroSection = (props: Props) => {
       style={{ backgroundImage: `url(${bg.src})` }}
     >
       <div className="flex flex-col-reverse lg:flex-row  justify-between w-full h-full max-w-[1400px] mx-auto px-8">
-        <div className="relative p-4">
+        <div className="relative lg:p-4">
           <div className="w-full lg:w-[700px] h-[300px] mb-4 relative">
             <div className="relative w-full h-0 pb-[56.25%] overflow-hidden rounded-lg">
               <iframe
-                src="https://www.youtube.com/embed/bx4otR19RY4?autoplay=1&mute=1"
+                src="https://www.youtube.com/embed/bx4otR19RY4?autoplay=1&mute=0"
                 title="YouTube video player"
-                allow="autoplay; encrypted-media"
+                allow="autoplay; encrypted-media; fullscreen"
                 allowFullScreen
                 className="absolute top-0 left-0 w-full h-full object-cover lg:z-10"
               ></iframe>
