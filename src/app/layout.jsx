@@ -18,7 +18,7 @@ export default function RootLayout({ children }) {
         <meta name="description" content={metadata.description} />
       </head>
       <body
-        className="antialiased background color  mx-auto"
+        // className="antialiased background color  mx-auto"
         style={{ fontFamily: "'Playfair Display', serif" }}
       >
         {children}

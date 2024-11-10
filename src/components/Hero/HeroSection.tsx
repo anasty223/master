@@ -18,7 +18,6 @@ const HeroSection = (props: Props) => {
   const [typedText, setTypedText] = useState("");
   const [loading, setLoading] = useState(true);
   const zoomRef = useRef<HTMLDivElement>(null);
-  const contentRef = useRef<HTMLDivElement>(null);
 
   const fullText =
     " I have two years of successful experience working as a frontend developer, and I consider myself a creative and determined individual, ready for new challenges and opportunities. My passion for creating beautiful and intuitive user interfaces is combined with a deep understanding of modern web technologies, allowing me to effectively implement projects of any scale. My approach to development is based on continuous learning and a commitment to improvement, enabling me to stay abreast of the latest trends and best practices in frontend development. I am ready to contribute to the team, enhancing user experience and bringing innovation to every project I work on";
@@ -43,17 +42,16 @@ const HeroSection = (props: Props) => {
       className="relative w-full h-[100vh] bg-cover bg-center overflow-visible"
       style={{ backgroundImage: `url(${bg.src})` }}
     >
-      <div className="flex justify-between w-full h-full max-w-[1400px] mx-auto px-8">
+      <div className="flex flex-col-reverse lg:flex-row  justify-between w-full h-full max-w-[1400px] mx-auto px-8">
         <div className="relative p-4">
-          <div className="w-[700px] h-[300px] mb-4 relative">
+          <div className="w-full lg:w-[700px] h-[300px] mb-4 relative">
             <div className="relative w-full h-0 pb-[56.25%] overflow-hidden rounded-lg">
               <iframe
                 src="https://www.youtube.com/embed/bx4otR19RY4?autoplay=1&mute=1"
                 title="YouTube video player"
                 allow="autoplay; encrypted-media"
                 allowFullScreen
-                className="absolute top-0 left-0 w-full h-full object-cover"
-                style={{ zIndex: 100 }}
+                className="absolute top-0 left-0 w-full h-full object-cover lg:z-10"
               ></iframe>
             </div>
 
@@ -94,35 +92,15 @@ const HeroSection = (props: Props) => {
             <img
               src={img.src}
               alt="cv img"
-              className="w-[550px] h-[370px] object-cover object-top rounded-lg relative z-10"
+              className="w-full lg:w-[550px] h-[370px] object-cover object-top rounded-lg relative lg:z-10"
             />
           </Zoom>
           <img
             src={green.src}
             alt="cv img"
-            className="max-w-[200px] rounded-lg absolute rotate-90 opacity-65"
+            className="max-w-[200px] rounded-lg absolute rotate-90 opacity-65 hidden lg:visible"
             style={{ top: "-95px", right: "-65px", zIndex: 5 }}
           />
-        </div>
-      </div>
-
-      <div ref={contentRef} className="absolute w-full h-full">
-        <div className="relative p-4">
-          <div className="w-[700px] h-[300px] mb-4 relative">
-            <div className="relative w-full h-0 pb-[56.25%] overflow-hidden rounded-lg">
-              <iframe
-                src="https://www.youtube.com/embed/bx4otR19RY4?autoplay=1&mute=1"
-                title="YouTube video player"
-                allow="autoplay; encrypted-media"
-                allowFullScreen
-                className="absolute top-0 left-0 w-full h-full object-cover"
-              ></iframe>
-            </div>
-
-            <div className="mt-8">
-              <p className="max-w-[700px]">{typedText}</p>
-            </div>
-          </div>
         </div>
       </div>
     </div>

@@ -7,19 +7,17 @@ import MainWrapper from "@/ui/Wraper/MainWraper";
 export default function Home() {
   return (
     <div
-      className="flex flex-col h-screen  text-white w-full"
+      className="flex flex-col h-screen  text-white w-full "
       // style={{
       //   backgroundImage: `linear-gradient(to bottom, rgba(105, 105, 105, 1) 25%, rgba(0, 0, 0, 1) 100%)`,
       // }}
     >
-      <main>
+      <main className="py-6">
         <Header />
 
         <HeroSection />
       </main>
-      <div className="justify-end mt-auto">
-        <Footer />
-      </div>
+      <div className="justify-end mt-auto">{/* <Footer /> */}</div>
     </div>
   );
 }
