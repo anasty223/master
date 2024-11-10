@@ -36,11 +36,11 @@ const OneCard: React.FC<Props> = ({ card }) => {
   return (
     <div className="">
       <Header />
-      <div className="flex flex-col items-start justify-center gap-4 max-w-[1400px] mx-auto">
+      <div className="flex flex-col items-start justify-center gap-4 max-w-[1400px] mx-auto p-4 md:p-0">
         <div className="my-4">
           <Breadcrumb items={breadcrumbItems} />
         </div>
-        <div className="flex items-center gap-4">
+        <div className="flex flex-col md:flex-row items-center gap-4">
           <div className="max-w-[600px]">
             {card.img && (
               <img src={card.img} alt={card.title} className="w-full h-auto" />
@@ -89,7 +89,7 @@ const OneCard: React.FC<Props> = ({ card }) => {
             <img
               src={selectedImage!}
               alt="Enlarged"
-              className="max-w-[800px] max-h-[800px] object-contain rounded-lg"
+              className="max-w-[800px] w-full max-h-[800px] object-contain rounded-lg"
             />
           </div>
         </div>

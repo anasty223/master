@@ -6,7 +6,7 @@ import { BsTelephoneFill } from "react-icons/bs";
 import { CiLinkedin } from "react-icons/ci";
 import { HiOutlineAtSymbol, HiOutlinePhone } from "react-icons/hi2";
 import { TbBrandTelegram } from "react-icons/tb";
-import { GiHamburgerMenu } from "react-icons/gi"; // Hamburger icon for mobile menu
+import { GiHamburgerMenu } from "react-icons/gi";
 import { AiOutlineClose } from "react-icons/ai";
 
 type Props = {};
@@ -23,7 +23,7 @@ const Header: React.FC<Props> = () => {
     pathname === path ? "text-blue-500 underline" : "";
 
   return (
-    <nav className="h-60 flex p-4 max-w-[1400px] mx-auto px-8">
+    <nav className="h-24 md:h-60 flex p-4 max-w-[1400px] mx-auto px-8">
       <div className="md:hidden">
         <button onClick={toggleMenu} className="text-xl text-white">
           <GiHamburgerMenu />
@@ -34,7 +34,6 @@ const Header: React.FC<Props> = () => {
           <h1 className="text-xl md:text-4xl lg:text-5xl mb-4 lg:mb-0 font-bold text-transparent bg-clip-text bg-gradient-to-r from-black via-white to-brown">
             <a href="/">Ana Trunova</a>
           </h1>
-          {/* Hamburger Icon for Mobile */}
 
           {/* Desktop Menu */}
           <div className="hidden md:flex z-0">
@@ -116,7 +115,6 @@ const Header: React.FC<Props> = () => {
         {/* Mobile Menu */}
         {isMenuOpen && (
           <div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-80 text-white z-10 p-4 flex flex-col items-end">
-            {/* Close Button */}
             <button
               onClick={toggleMenu}
               className="text-3xl text-white absolute top-4 right-4"
