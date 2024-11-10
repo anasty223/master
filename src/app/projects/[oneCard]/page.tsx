@@ -7,7 +7,7 @@ export interface ContextProps {
 
 export default async function Card({ params }: ContextProps) {
   // Ожидаем параметры
-  const { oneCard } = params;
+  const { oneCard } = await params;
 
   try {
     const response = await fetch(

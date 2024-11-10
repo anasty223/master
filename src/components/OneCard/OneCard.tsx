@@ -1,4 +1,5 @@
 "use client";
+import Breadcrumb from "@/ui/Breadcrumb";
 import Header from "@/ui/Header/Header";
 import React, { useState } from "react";
 
@@ -27,11 +28,18 @@ const OneCard: React.FC<Props> = ({ card }) => {
     setIsModalOpen(false);
     setSelectedImage(null);
   };
-
+  const breadcrumbItems = [
+    { label: "Home", href: "/" },
+    { label: "Projects", href: "/projects" },
+    { label: card.title },
+  ];
   return (
     <div className="">
       <Header />
-      <div className="flex flex-col items-center justify-center gap-4 max-w-[1400px] mx-auto">
+      <div className="flex flex-col items-start justify-center gap-4 max-w-[1400px] mx-auto">
+        <div className="my-4">
+          <Breadcrumb items={breadcrumbItems} />
+        </div>
         <div className="flex items-center gap-4">
           <div className="max-w-[600px]">
             {card.img && (
@@ -65,7 +73,6 @@ const OneCard: React.FC<Props> = ({ card }) => {
             </div>
           </div>
         </div>
-
         <p>{card.content}</p>
       </div>
 
