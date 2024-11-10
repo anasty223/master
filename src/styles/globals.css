@@ -21,10 +21,10 @@
     -moz-osx-font-smoothing: grayscale;
     background-color: black;
     color: white;
-    margin: 0; /* Removed 'auto' */
+    margin: 0;
     background-image: linear-gradient(
       to bottom,
-      rgba(105, 105, 105, 1) 25%,
+      rgba(105, 105, 105, 1) 15%,
       rgba(0, 0, 0, 1) 100%
     );
     overflow-x: hidden;

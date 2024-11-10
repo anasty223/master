@@ -4,13 +4,11 @@ import { ImArrowRight } from "react-icons/im";
 import img from "/src/assets/img.png";
 import green from "/src/assets/269.png";
 import brown from "/src/assets/263.png";
-import bg from "/src/assets/font.png";
+import bg from "/src/assets/font5.png";
 import Zoom from "react-medium-image-zoom";
 import "react-medium-image-zoom/dist/styles.css";
-import { Autocomplete, AutocompleteItem } from "@nextui-org/react";
+
 import { MdOutlineSaveAlt } from "react-icons/md";
-import html2canvas from "html2canvas";
-import jsPDF from "jspdf";
 
 type Props = {};
 
@@ -39,8 +37,8 @@ const HeroSection = (props: Props) => {
 
   return (
     <div
-      className="relative w-full h-[100vh] bg-cover bg-center overflow-visible"
-      style={{ backgroundImage: `url(${bg.src})` }}
+    // className="relative w-full h-[20vh] bg-cover bg-center overflow-hidden "
+    // style={{ backgroundImage: `url(${bg.src})` }}
     >
       <div className="flex flex-col-reverse lg:flex-row  justify-between w-full h-full max-w-[1400px] mx-auto px-8">
         <div className="relative lg:p-4">
@@ -60,12 +58,12 @@ const HeroSection = (props: Props) => {
                 {typedText}
               </p>
 
-              <img
+              {/* <img
                 src={brown.src}
                 alt="cv img"
                 className="max-w-[150px] rounded-lg absolute rotate-180 mt-auto opacity-65"
                 style={{ bottom: "-180px", left: "-100px", zIndex: 0 }}
-              />
+              /> */}
             </div>
           </div>
         </div>
@@ -95,12 +93,12 @@ const HeroSection = (props: Props) => {
               className="w-full lg:w-[550px] h-[370px] object-cover object-top rounded-lg relative lg:z-10"
             />
           </Zoom>
-          <img
+          {/* <img
             src={green.src}
             alt="cv img"
             className="max-w-[200px] rounded-lg absolute rotate-90 opacity-65 hidden lg:visible"
             style={{ top: "-95px", right: "-65px", zIndex: 5 }}
-          />
+          /> */}
         </div>
       </div>
     </div>
