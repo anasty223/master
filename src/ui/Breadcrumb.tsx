@@ -8,9 +8,9 @@ type BreadcrumbProps = {
 const Breadcrumb: React.FC<BreadcrumbProps> = ({ items }) => {
   return (
     <nav aria-label="breadcrumb">
-      <ol className="flex space-x-2">
+      <ol className="flex space-x-2 ">
         {items.map((item, index) => (
-          <li key={index} className="flex items-center">
+          <li key={index} className="flex items-center text-[#e4e4e7]-300 ">
             {item.href ? (
               <Link
                 href={item.href}
@@ -19,10 +19,12 @@ const Breadcrumb: React.FC<BreadcrumbProps> = ({ items }) => {
                 {item.label}
               </Link>
             ) : (
-              <span className="text-[#232323]">{item.label}</span>
+              <span className="text-[#e4e4e7]-300 underline p-2">
+                {item.label}
+              </span>
             )}
             {index < items.length - 1 && (
-              <span className="mx-2 text-[#232323]">/</span>
+              <span className="mx-2 text-[#e4e4e7]-300 ">/</span>
             )}
           </li>
         ))}
