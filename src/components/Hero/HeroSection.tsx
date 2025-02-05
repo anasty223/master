@@ -67,14 +67,14 @@ const HeroSection = (props: Props) => {
           <div className="flex items-center gap-4 mb-4">
             <MdOutlineSaveAlt />
             <a
-              href="/СV_AnastasiiaTrunova_React-Frontenddeveloper.pdf"
+              href="/СV_Anastasiia Trunova React-Frontend developerPDF.pdf"
               download
               className="hover:text-[#232323] hover:underline transition-colors duration-300"
             >
               <h3 className="cursor-pointer font-extrabold">Save PDF</h3>
             </a>
             <a
-              href="/СV_AnastasiiaTrunova_React-Frontenddeveloper.png"
+              href="/СV_Anastasiia Trunova React-Frontend developerPNG.png"
               download
               className="hover:text-[#232323] hover:underline transition-colors duration-300"
             >
