@@ -3,6 +3,7 @@ import Slider from "@/components/Slider/Slider";
 import Header from "@/ui/Header/Header";
 import React from "react";
 import bg from "/src/assets/font4.png";
+import ThreeCanvas from "@/components/ThreeCanvas";
 
 type Props = {};
 
@@ -13,7 +14,10 @@ const ProjectsPage = (props: Props) => {
       style={{ backgroundImage: `url(${bg.src})` }}
     >
       <Header />
-      {/* <Slider /> */}
+
+      <div className="absolute top-0 left-0 w-full h-full">
+        <ThreeCanvas />
+      </div>
     </div>
   );
 };
